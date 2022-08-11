@@ -9,13 +9,13 @@
     <tbody *ngIf="transferencias.length > 0; else listaVazia">
       <tr class="tabela__conteudo" *ngFor="let transferencia of transferencias">
         <td class="tabela__linhe">
-          {{ transferencia.valor }}
+          {{ transferencia.valor | currency: "BRL" }}
         </td>
         <td class="tabela__linha">
           {{ transferencia.destino }}
         </td>
         <td class="tabela__linha">
-          {{ transferencia.data | date: "hh/MM/yy HH:mm" }}
+          {{ transferencia.data | date: "short" }}
         </td>
       </tr>
     </tbody>

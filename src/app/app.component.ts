@@ -9,11 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'phambrebank';
 
-  transferencias: any[] = [];
-
   constructor(private service: TransferenciaService) {}
 
-  transferir($event: any) {
-    this.service.adicionar($event).subscribe((x) => console.log(x));
-  }
 }
